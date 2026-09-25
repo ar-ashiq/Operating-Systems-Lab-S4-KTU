@@ -1,10 +1,96 @@
 # Operating Systems Lab - KTU S4
 
-Programs and reference material for the Operating Systems laboratory in the fourth semester of the KTU CSE curriculum. The repository covers Linux commands, shell scripting, system calls, process scheduling, inter-process communication, synchronization, memory management, deadlocks, page replacement, and disk scheduling.
+> A practical collection of **Operating Systems laboratory programs for KTU CSE S4**.
 
-Every item below links directly to its source file on GitHub.
+[![C](https://img.shields.io/badge/language-C-00599C?logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Shell](https://img.shields.io/badge/language-Shell-4EAA25?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![GitHub stars](https://img.shields.io/github/stars/ar-ashiq/Operating-Systems-Lab-S4-KTU?style=social)](https://github.com/ar-ashiq/Operating-Systems-Lab-S4-KTU)
+
+This repository brings together the source code and reference material completed during the Operating Systems lab. It is useful for revising concepts, preparing for practical examinations, and comparing different OS algorithms through small, readable implementations.
+
+## What You Will Find
+
+- Linux command reference material and shell scripting exercises
+- UNIX process, directory, and file I/O system calls
+- CPU scheduling simulations with waiting and turnaround times
+- Shared-memory IPC and semaphore-based synchronization problems
+- Fixed and variable partition memory allocation
+- FIFO, LRU, LFU, and Optimal page replacement
+- Banker's safety algorithm and deadlock detection
+- FCFS, SCAN, and CSCAN disk scheduling
+
+## Quick Navigation
+
+| Topic | Start here |
+| --- | --- |
+| Shell scripting | [Cycle 2](#cycle-2---shell-scripting) |
+| System calls and file I/O | [Cycles 3-4](#cycle-3---process-and-directory-system-calls) |
+| CPU scheduling | [Cycle 5](#cycle-5---cpu-scheduling-algorithms) |
+| IPC and synchronization | [Cycles 6-7](#cycle-6---ipc-using-shared-memory) |
+| Memory management | [Cycles 8-9](#cycle-8---memory-allocation) |
+| Deadlocks and disk scheduling | [Cycles 10-11](#cycle-10---deadlock-handling) |
+| Complete file list | [Lab Programs](#lab-programs) |
+
+## Lab Overview
+
+| Cycle | Area | Main concepts | Files |
+| --- | --- | --- | ---: |
+| 1 | Linux commands | Command-line fundamentals | 1 |
+| 2 | Shell scripting | Conditions, loops, search, patterns, arguments | 14 |
+| 3 | System calls | `fork`, `exec`, `stat`, directory operations | 4 |
+| 4 | File I/O | `open`, `read`, `write`, `close` | 1 |
+| 5 | CPU scheduling | FCFS, SJF, SRTF, Round Robin, Priority | 5 |
+| 6 | Shared-memory IPC | `shmget`, `shmat`, `shmdt`, `shmctl` | 3 |
+| 7 | Synchronization | Semaphores and classic problems | 4 |
+| 8 | Memory allocation | Fixed and variable partitions | 2 |
+| 9 | Page replacement | FIFO, LRU, LFU, Optimal | 5 |
+| 10 | Deadlock handling | Safety, resource requests, detection | 4 |
+| 11 | Disk scheduling | FCFS, SCAN, CSCAN | 2 |
+
+## Getting Started
+
+### Prerequisites
+
+You will need:
+
+- A Unix-like operating system such as Linux or macOS
+- GCC or another C compiler
+- Bash or a compatible shell
+- POSIX development support for programs using processes, threads, shared memory, or semaphores
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/ar-ashiq/Operating-Systems-Lab-S4-KTU.git
+cd Operating-Systems-Lab-S4-KTU
+```
+
+### Compile and Run a C Program
+
+```bash
+gcc cycle5/fcfs.c -o fcfs
+./fcfs
+```
+
+For a program using POSIX threads or semaphores, your platform may require an additional linker flag:
+
+```bash
+gcc cycle7/producerConsumer.c -o producer_consumer -pthread
+./producer_consumer
+```
+
+### Run a Shell Script
+
+```bash
+chmod +x cycle2/1grossSalary.sh
+./cycle2/1grossSalary.sh
+```
+
+Most programs are interactive and expect input from the terminal. Read the source before running it so you know the expected input format and algorithm assumptions.
 
 ## Lab Programs
+
+All links below open the corresponding file directly on GitHub.
 
 ### Cycle 1 - Linux Commands
 
@@ -84,24 +170,29 @@ Every item below links directly to its source file on GitHub.
 - [Disk scheduling](https://github.com/ar-ashiq/Operating-Systems-Lab-S4-KTU/blob/master/cycle11/diskscheduling.c) - Simulates FCFS, SCAN, and CSCAN scheduling.
 - [Extended disk scheduling](https://github.com/ar-ashiq/Operating-Systems-Lab-S4-KTU/blob/master/cycle11/diskScheduling_extended.c) - Simulates disk scheduling with configurable head direction.
 
-## Running the Programs
+## Learning Path
 
-Compile C programs with a C compiler such as `gcc`:
-
-```bash
-gcc cycle5/fcfs.c -o fcfs
-./fcfs
-```
-
-Run shell scripts with:
-
-```bash
-chmod +x cycle2/1grossSalary.sh
-./cycle2/1grossSalary.sh
-```
-
-Some programs use POSIX system calls, shared memory, threads, or semaphores and may require a Unix-like operating system.
+1. Begin with [shell scripting](#cycle-2---shell-scripting) to practise input, conditions, loops, and functions.
+2. Move to [system calls](#cycle-3---process-and-directory-system-calls) and [file I/O](#cycle-4---file-io-system-calls).
+3. Compare the [CPU scheduling](#cycle-5---cpu-scheduling-algorithms) algorithms using the same process concepts.
+4. Study [IPC and synchronization](#cycle-6---ipc-using-shared-memory) before working through deadlocks.
+5. Finish with [memory management](#cycle-8---memory-allocation), [page replacement](#cycle-9---page-replacement-algorithms), and [disk scheduling](#cycle-11---disk-scheduling-algorithms).
 
 ## Contributions
 
-Found an issue or have an improvement? Please [open an issue](https://github.com/ar-ashiq/Operating-Systems-Lab-S4-KTU/issues) or submit a pull request. You can also contact [ashiqar2002@gmail.com](mailto:ashiqar2002@gmail.com).
+Found an error, portability issue, or a missing lab program? Contributions are welcome.
+
+1. Fork the repository.
+2. Create a focused branch for your change.
+3. Test the program on a Unix-like system.
+4. Open a pull request with a short explanation of the change.
+
+You can also [open an issue](https://github.com/ar-ashiq/Operating-Systems-Lab-S4-KTU/issues) or contact [ashiqar2002@gmail.com](mailto:ashiqar2002@gmail.com).
+
+## Acknowledgements
+
+Created as a practical study resource for Kerala Technological University (KTU) Computer Science students learning Operating Systems.
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the programs with the license notice included.
