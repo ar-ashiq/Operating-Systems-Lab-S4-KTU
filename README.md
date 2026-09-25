@@ -2,8 +2,6 @@
 
 Programs and reference material for the Operating Systems laboratory in the fourth semester of the KTU CSE curriculum. The repository covers Linux commands, shell scripting, system calls, process scheduling, inter-process communication, synchronization, memory management, deadlocks, page replacement, and disk scheduling.
 
-Every item below links directly to its source file on GitHub.
-
 ## Lab Programs
 
 ### Cycle 1 - Linux Commands
