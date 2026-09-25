@@ -1,0 +1,4 @@
+# C compiler and build artifacts
+a.out
+*.out
+*.o
